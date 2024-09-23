@@ -1,0 +1,34 @@
+<!-- Widget layout simplified to act as a container -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/widgetTopApps"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_sec"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Apps by privacy score"
+            android:textColor="@color/title_prim"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/containerAppViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewHeader"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_prim">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Welcome!"
+            android:textColor="@color/title_prim"
+            android:textSize="32sp"
+            tools:ignore="RtlCompat" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="@string/welcome_text"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <include
+            layout="@layout/component_simulation_viewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="352dp" />
+
+        <Button
+            android:id="@+id/button_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_misc"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="CHOOSE"
+            android:textColor="@color/background_prim"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

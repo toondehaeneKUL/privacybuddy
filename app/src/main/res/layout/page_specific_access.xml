@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_prim">
+
+    <include layout="@layout/component_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/locationAccessByTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/location_access_by"
+                android:textColor="@color/title_prim"
+                android:textSize="32sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/appLogoImageView"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/dataEntryApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="App Name"
+                android:textColor="@color/title_prim"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/dataEntryTime"
+                android:fontFamily="sans-serif-medium"
+                android:text="time and date"
+                android:textColor="@color/text"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/accessedLocationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Accessed Location"
+                android:textColor="@color/title_prim"
+                android:textSize="28sp" />
+
+
+        <!--
+
+                <include layout="@layout/button_show_timeline"
+                android:id="@+id/buttonShowTimeline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+            <include layout="@layout/button_show_map"
+                android:id="@+id/buttonShowMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+        -->
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_marginTop="20dp">
+
+                    <com.mapbox.maps.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <!-- ImageView to display the icon -->
+                <ImageView
+                    android:id="@+id/imageViewMarker"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_red_marker"
+
+
+                android:layout_gravity="center_vertical" />
+
+                <!-- TextView for displaying the address -->
+                <TextView
+                    android:id="@+id/textViewAdress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                android:text="Grote Steenweg 470, 3350 Linter"
+                android:textSize="20sp"
+                android:textColor="@color/text" />
+            </LinearLayout>
+
+
+
+
+            <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Location details accessed"
+                            android:textColor="@color/title_prim"
+                            android:textSize="28sp"
+                            tools:ignore="RtlCompat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="This is the exact information the app received when it accessed your location."
+                android:textColor="@color/text"
+                android:textSize="16sp" />
+
+            <include layout="@layout/component_single_access_data_entry"
+                android:id="@+id/dataEntryLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/component_single_access_data_entry"
+                android:id="@+id/dataEntryLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/component_single_access_data_entry"
+                android:id="@+id/dataEntryAltitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:paddingTop="10dp"
+                android:background="@color/background_prim"
+                android:layout_height="wrap_content">
+
+                <!-- Data Name -->
+                <TextView
+                    android:id="@+id/textViewDataNameAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accuracy:"
+                    android:textSize="20sp"
+                    android:textColor="@color/text" />
+
+                <!-- Data Value -->
+                <TextView
+                    android:id="@+id/textViewDataValueAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textViewDataNameAccuracy"
+                    android:layout_marginStart="16dp"
+                    android:text="59.871"
+                    android:textSize="20sp"
+                    android:textColor="@color/text" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_info"
+                    android:textColor="@color/text"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/component_single_access_data_entry"
+                android:id="@+id/dataEntrySpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:paddingTop="10dp"
+                android:background="@color/background_prim"
+                android:layout_height="wrap_content">
+
+                <!-- Data Name -->
+                <TextView
+                    android:id="@+id/textViewDataNameBearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bearing:"
+                    android:textSize="20sp"
+                    android:textColor="@color/text" />
+
+                <!-- Data Value -->
+                <TextView
+                    android:id="@+id/textViewDataValueBearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/textViewDataNameBearing"
+                    android:layout_marginStart="16dp"
+                    android:text="59.871"
+                    android:textSize="20sp"
+                    android:textColor="@color/text" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewInfoBearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/text"
+                    android:src="@drawable/ic_info" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+
+
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PrivacyBuddy" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/background_prim</item>
+    </style>
+
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:background">@drawable/bg_dropdown_dropped</item>
+        <item name="android:textColor">@color/title_prim</item>
+        <item name="android:textSize">20sp</item>
+
+        <item name="android:popupBackground">@color/background_prim</item>
+    </style>
+</resources>
+

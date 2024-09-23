@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">PrivacyBuddy</string>
+    <string name="timeline_text">Timeline of when apps used your location in the past %1$d days \n\nClick on an access to get more information</string>
+    <string name="timeline_text_single_day">Timeline of when apps used your location in the past 24 hours</string>
+
+    <string name="timeline_title">Location usage for</string>
+
+    <string name="welcome_text">Welcome to PrivacyBuddy. This app is a prototype designed to test a built-in OS service created by Tristan Pelgrims and Maxime Bellis for their thesis.\n\nChoose a data file, the app will load into the privacy dashboard with the data you choose.\n\nWe invite you to explore the app as if you are reviewing your own data from the past week.</string>
+
+    <!-- Location Accuracy Descriptions -->
+    <string name="precise"><b>Precise:</b> Uses GPS or similar services to access the device\'s exact location with high accuracy.</string>
+    <string name="approximate"><b>Approximate:</b> Determines the general area of the device using Wi-Fi, cell towers, and less precise methods.</string>
+
+    <!-- Access Type Descriptions -->
+    <string name="foreground"><b>Foreground:</b> Accesses location while the app doing the location access is in use.</string>
+    <string name="background"><b>Background:</b> Accesses location in the background, without user interaction, like weather updates during other phone use.</string>
+    <string name="subliminal"><b>Subliminal:</b> Obtains location data when the phone is not in use, such as during sleep mode when the phone is resting on a table. When your phone is turned off completely, no accesses can be done.</string>
+
+    <!-- dashboard -->
+    <string name="dashboard_title">Privacy dashboard</string>
+    <string name="choose_app_title">Choose app to show</string>
+    <string name="dashboard_text">Showing accesses in last %1$d days</string>
+    <string name="dashboard_text_single_day">Showing accesses in last 24 hours</string>
+
+    <string name="title_activity_loc_timeline">LocTimelineActivity</string>
+
+    <!-- Specific access page explanations -->
+
+    <string name="info_accuracy">Accuracy, measured in meters, indicates the radius of the circle around the accessed location within which your actual location will be. With this accuracy of %1$d meters, the app knows you were in %2$s</string>
+    <string name="info_bearing">Bearing, measured in degrees, indicates the direction of travel. It represents an angle between 0 and 360 degrees, measured clockwise from true north.</string>
+
+    <string name="location_access_by">Location access by</string>
+
+    <!-- Top apps page -->
+    <string name="top_apps_title">Apps ordered by</string>
+    <string name="top_apps_text">This is a list of all your apps ordered by the amount of location accesses they did. If an app did not do location accesses they are not featured.</string>
+    <string name="top_apps_privacy_score">This list ranks your apps by their privacy score, where a higher score indicates better privacy practices.</string>
+    <string name="top_apps_access_frequency">This list shows your apps ordered by the frequency of location accesses, with more frequent accessors listed first.</string>
+    <string name="sort_by_accesses">Access total</string>
+    <string name="sort_by_frequency">Access frequency</string>
+    <string name="sort_by_privacy_score">Privacy score</string>
+
+    <string name="privacy_scores_not_calculated">Privacy scores require more than one day of data to ensure accuracy of the calculation.</string>
+    <string name="privacy_score_explanation">Privacy Score is derived by analyzing daily app accesses: less frequent and less intrusive accesses lead to a higher score. Penalties are applied based on access type and frequency, reducing the base score of 100.</string>
+
+
+
+
+
+</resources>
